@@ -5,6 +5,10 @@ import "unicode"
 
 type letterCounter struct{ identifier string }
 
+func (l letterCounter) name() string {
+	return l.identifier
+}
+
 func (l letterCounter) count(input string) int {
 	result := 0
 	for _, char := range input {
